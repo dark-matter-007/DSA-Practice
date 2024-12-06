@@ -15,22 +15,7 @@ public class EvenOddSegregation {
             System.out.print(elem + " ");
         }
     }
-
-    void sortArray(int[] arr) {
-        boolean found = true;
-        while (found) {
-            boolean innerfound = false;
-            for (int index = 1; index < arr.length; index++){
-                if(arr[index]<arr[index-1]){
-                    int temp = arr[index-1];
-                    arr[index-1] = arr[index];
-                    arr[index] = temp;
-                    innerfound = true;
-                }
-            }
-            found = innerfound;
-        }
-    }
+    
 
     public void segregateEvenOdd(int[] arr){
         int[] evenNums = Arrays.stream(arr).filter(number -> number % 2 == 0).toArray();
