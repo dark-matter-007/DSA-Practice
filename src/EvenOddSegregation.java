@@ -1,16 +1,24 @@
+import java.util.Arrays;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
 public class EvenOddSegregation {
 
     public static void main(String[] argv) {
         int[] arr = {6,5,4,3,2,1};
         EvenOddSegregation evenOddSegregation = new EvenOddSegregation();
         evenOddSegregation.segregateEvenOdd(arr);
-        for (int element : arr){
-            System.out.print(element + " ");
-        }
+        evenOddSegregation.printArray(arr);
     }
 
     boolean isEven(int num){
         return num % 2 == 0;
+    }
+
+    void printArray(int[] arr){
+        for(int elem : arr){
+            System.out.print(elem + " ");
+        }
     }
 
     void sortArray(int[] arr) {
@@ -31,26 +39,12 @@ public class EvenOddSegregation {
     }
 
     public void segregateEvenOdd(int[] arr){
-        sortArray(arr);
-        int leftPtr = 0, rightPtr = 0;
-        while(leftPtr < arr.length && rightPtr < arr.length){
-            if (isEven(arr[leftPtr])){
-                if(leftPtr < arr.length - 1) leftPtr++;
-                if (rightPtr < arr.length - 1) rightPtr++;
-            } else {
-                while(! isEven(arr[rightPtr])){
-                    if (rightPtr < arr.length-1) {
-                        rightPtr++;
-                    }
-                    else break;
-                }
-                int temp = arr[leftPtr];
-                arr[leftPtr] = arr[rightPtr];
-                arr[rightPtr] = temp;
-                leftPtr++;
-                rightPtr++;
-            }
-        }
+        int[] evenNums = Arrays.stream(arr).filter(number -> number % 2 == 0).toArray();
+        int[] oddNums = Arrays.stream(arr).filter(number -> number % 2 != 0).toArray();
+        sortArray(evenNums);
+        sortArray(oddNums);
+        System.arraycopy(evenNums, 0, arr, 0, evenNums.length);
+        System.arraycopy(oddNums, 0, arr, evenNums.length, oddNums.length);
     }
 }
 
