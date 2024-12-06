@@ -35,8 +35,8 @@ public class EvenOddSegregation {
     public void segregateEvenOdd(int[] arr){
         int[] evenNums = Arrays.stream(arr).filter(number -> number % 2 == 0).toArray();
         int[] oddNums = Arrays.stream(arr).filter(number -> number % 2 != 0).toArray();
-        sortArray(evenNums);
-        sortArray(oddNums);
+        Arrays.sort(evenNums);
+        Arrays.sort(oddNums);
         System.arraycopy(evenNums, 0, arr, 0, evenNums.length);
         System.arraycopy(oddNums, 0, arr, evenNums.length, oddNums.length);
     }
