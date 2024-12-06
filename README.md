@@ -20,4 +20,4 @@
 >> <br> Output: [10, 22, 4, 6]
 >> <br> Explanation: Here all elements are even, so no need of segregataion
 >
-> <br><br> [CLICK to jump to solution](src/EvenOddSegregation.java)
+> <br>[CLICK to jump to solution](src/EvenOddSegregation.java)
