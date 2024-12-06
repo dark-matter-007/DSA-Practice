@@ -1,6 +1,4 @@
 import java.util.Arrays;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class EvenOddSegregation {
 
@@ -11,9 +9,6 @@ public class EvenOddSegregation {
         evenOddSegregation.printArray(arr);
     }
 
-    boolean isEven(int num){
-        return num % 2 == 0;
-    }
 
     void printArray(int[] arr){
         for(int elem : arr){
@@ -31,7 +26,6 @@ public class EvenOddSegregation {
                     arr[index-1] = arr[index];
                     arr[index] = temp;
                     innerfound = true;
-                    continue;
                 }
             }
             found = innerfound;
