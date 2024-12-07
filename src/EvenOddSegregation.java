@@ -15,7 +15,7 @@ public class EvenOddSegregation {
             System.out.print(elem + " ");
         }
     }
-    
+
 
     public void segregateEvenOdd(int[] arr){
         int[] evenNums = Arrays.stream(arr).filter(number -> number % 2 == 0).toArray();
