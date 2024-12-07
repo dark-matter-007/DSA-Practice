@@ -11,7 +11,7 @@ public class StackImplementation {
 
         while (T-- > 0) {
             MyStack sq = new MyStack();
-            System.out.print("Enter input for case %d : ".formatted(T+1));
+            System.out.printf("Enter input for case %d : ", T+1);
             String line = scanner.nextLine();
             Scanner ss = new Scanner(line);
             List<Integer> nums = new ArrayList<>();
@@ -40,7 +40,7 @@ public class StackImplementation {
 
 
 class MyStack {
-    private int[] arr;
+    private final int[] arr;
     private int top;
 
     public MyStack() {
