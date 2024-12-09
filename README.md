@@ -22,7 +22,7 @@
 >> <br> Explanation: Here all elements are even, so no need of segregataion
 >
 > <br>[CLICK to jump to solution](src/EvenOddSegregation.java)
-
+---
 > Q2. Write a program to implement a Stack using Array. Your task is to use the class as shown in the comments in the code editor and complete the functions push() and pop() to implement a stack. The push() method takes one argument, an integer 'x' to be pushed into the stack and pop() which returns an integer present at the top and popped out from the stack. If the stack is empty then return -1 from the pop() method. <br>
 > <br> Note: The input is given in form of queries. Since there are two operations push() and pop(), there is two types of queries as described below:
 > <br> (i) 1 x   (a query of this type means  pushing 'x' into the stack)
