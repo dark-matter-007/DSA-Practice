@@ -31,3 +31,10 @@
 > ![](resources/img.png)
 > <br><br>[CLICK to jump to solution](documentation/stackimplementation.md)
 
+---
+
+> Q3. Check whether given two arrays arr1[], arr2[] are identical or not. Two arrays are called identical arrays if they contain the same element with the same count, regardless of the order of elements. <br><br>
+> ![alt text](image.png)
+> ![alt text](image-1.png)
+> <br>
+> [Jump to solution](documentation/identicalarrays.md)
